@@ -1,5 +1,6 @@
 import './FishSearchBar.css'
 import { useState } from 'react';
+const apiUrl = import.meta.env.VITE_API_URL_SEARCH;
 
 function FishSearchBar({header}) {
     const [searchContent, setSearchContent] = useState("");
@@ -13,7 +14,7 @@ function FishSearchBar({header}) {
     async function handleSearch(query){
         try{
             if (query.length >= 1) {
-                const response = await fetch("http://localhost:3000/api/search",{
+                const response = await fetch(apiUrl,{
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ query })

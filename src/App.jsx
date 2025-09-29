@@ -3,6 +3,7 @@ import FishSearchBar from "./FishSearchBar.jsx";
 import SubmitButton from "./SubmitButton.jsx";
 import ResultCard from "./ResultCard.jsx";
 import './App.css'
+const apiUrl = import.meta.env.VITE_API_URL_RESULT;
 
 function App(){
   const [query1, setQuery1] = useState("");
@@ -14,7 +15,7 @@ function App(){
     //Fetch data function
     async function fetchData() {
       try{
-        const response = await fetch("http://localhost:3000/api/checkCompatibility",{
+        const response = await fetch(apiUrl,{
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query1, query2 })
