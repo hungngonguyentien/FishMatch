@@ -1,0 +1,93 @@
+:root{
+    --score-color: rgb(31, 173, 156);
+    --box-background-color: hsla(0, 23%, 82%, 0.536);
+}
+
+.resultCard{
+    background-color: var(--box-background-color);
+    height: 100vh;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.scoreBox{
+    background-color: var(--score-color);
+    height: 25vh;
+    width: 25vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreTextBox{
+    text-align: center;
+    color: black;
+    background-color: var(--box-background-color);
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3.5rem;
+    font-family:monospace;
+}
+
+.scoreBox.animate{
+    animation: changingColor 2.6s forwards;
+}
+
+@keyframes changingColor {
+    0% {background-color: rgb(54, 77, 205)}
+    50% {background-color: rgb(183, 255, 105);}
+    100% {background-color: var(--score-color);}
+}
+
+.scoreAndComment{
+    display: flex;
+    flex-direction: row;
+}
+
+.overallCommentBox{
+    margin-left: 40px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;;
+    min-width: 200px;
+    max-width: 250px;
+    margin-top: 0;
+} 
+
+.overallCommentBox h2{
+    font-size:  2rem;
+    margin-top: 1px;
+    margin-bottom: 7px;
+}
+
+.overallCommentBox p{
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin: 0;
+    color: darkblue;
+    font-weight: bold;
+}
+
+.possibleIssuesList{
+    margin-top: 5px;
+    line-height: 1.3;
+    color: darkblue;
+}
+
+.detailCardContainer{
+    display: flex;
+    margin-top: 50px;
+    gap: 100px;
+    align-items: flex-start;
+}

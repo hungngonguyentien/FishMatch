@@ -1,0 +1,37 @@
+
+.fishSearchBar{
+    width: 300px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 0px;
+    padding-left: 5px;
+}
+
+.suggestItem{
+    width: 300px;
+    text-align: left;
+    height: 30px;
+    padding-left: 5px;
+}
+
+.suggestItem:hover{
+    background-color: rgb(204, 206, 207);
+}
+
+.SearchContainer{
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 10;
+}
+
+.suggestListContainer{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    border: 1px solid black;
+}

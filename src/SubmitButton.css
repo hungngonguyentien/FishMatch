@@ -1,0 +1,21 @@
+.submitButton{
+    border: none;
+    height: 60px;
+    width: 100lvb;
+    border-radius: 20px;
+    color: aliceblue;
+    background-color: rgb(97, 129, 255);
+    font-size: 1.7rem;
+    margin-top: auto;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.submitButton:hover{
+    cursor: pointer;
+    background-color: rgb(74, 98, 195);
+}
+
+.submitButton:active{
+    background-color: rgb(65, 91, 195);
+}
