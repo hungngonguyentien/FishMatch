@@ -11,9 +11,10 @@ function SubmitButton({setQuery1, setQuery2}){
     }
 
     return (
-        <>
+        <div className="buttonContainer">
             <button className="submitButton" onClick={search}>Check Compatibility</button>
-        </>
+            <div className="serverNote">(server may take ~50s to start)</div>
+        </div>
     )
 }
 

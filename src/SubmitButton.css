@@ -19,3 +19,17 @@
 .submitButton:active{
     background-color: rgb(65, 91, 195);
 }
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.serverNote {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+}
