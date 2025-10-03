@@ -1,0 +1,91 @@
+/* Main navigation bar container - Fixed height layout */
+.appNav{
+    display: flex;               /* Use flexbox for layout */
+    align-items: center;         /* Center items vertically */
+    justify-content: space-between; /* Space between left and right sections */
+    background: var(--nav-bg, rgba(255, 255, 255, 0.358)); /* Semi-transparent white background */
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    height: 50px;               /* Fixed height for consistent sizing */
+}
+
+/* Left section - Logo and brand (30% width) */
+.navLeft{
+    display: flex;
+    align-items: center;
+    justify-content: center; /* center horizontally */
+    width: 20%;
+    gap: 8px;
+
+}
+.navLeft .fishIcon{
+    font-size: 20px;
+}
+.navLeft .brand{
+    font-weight: 600;
+    font-size: 18px;
+}
+.navRight{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    /* Evenly distribute children horizontally */
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+/* Base navigation item styling */
+.navItem {
+    display: flex;              /* Use flexbox for vertical centering */
+    align-items: center;        /* Center content vertically */
+    position: relative;         /* For absolute positioning of hover effect */
+    color: #222;
+    text-decoration: none;
+    transition: color 0.2s;
+    height: 50px;              /* Match navbar height */
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+/* Check Compatibility link styling */
+/* Check Compatibility interactive states */
+.navCheck {
+    cursor: pointer;           /* Show clickable cursor */
+    overflow: hidden;          /* Contain the hover effect */
+    height: 50px;             /* Match navbar height exactly */
+    display: flex;            /* Use flexbox for vertical centering */
+    align-items: center;      /* Center content vertically */
+}
+
+/* Animated hover effect - sliding black overlay */
+.navCheck::before {
+    content: "";
+    position: absolute;
+    left: 0;    
+    top: 0;
+    width: 0%;
+    height: 50px;            /* Exact height to match navbar */
+    background: hsla(0, 0%, 0%, 0.289); /* Semi-transparent black */
+    z-index: 0;             /* Place behind text */
+    transition: width 0.4s cubic-bezier(.4,0,.2,1); /* Smooth animation */
+    border-radius: 0;       /* Remove rounded corners */
+}
+/* Hover animation - expand overlay to full width */
+.navCheck:hover::before {
+    width: 100%;             /* Animate to full width on hover */
+}
+
+/* Keep text dark on hover */
+.navCheck:hover {
+    color: #222222;
+}
+
+/* Ensure link stays above the hover overlay */
+.navCheck {
+    z-index: 1;
+}
+
+/* Keep text content above the hover overlay */
+.navCheck > * {
+    position: relative;
+    z-index: 1;
+}

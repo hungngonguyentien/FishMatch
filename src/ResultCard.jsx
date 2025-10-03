@@ -13,7 +13,6 @@ function ResultCard({result}) {
     const [totalScore, setTotalScore] = useState(0);
     const [overallComment, setOverallComment] = useState("");
     const [possibleIssues, setPossibleIssues] = useState([]);
-    const [fishOneWaterInfo, setFishOneWaterInfo] = useState([]);
 
     // Update score and color when result changes
     useEffect(() => {

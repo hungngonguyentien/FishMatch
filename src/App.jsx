@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import FishSearchBar from "./FishSearchBar.jsx";
 import SubmitButton from "./SubmitButton.jsx";
 import ResultCard from "./ResultCard.jsx";
+import NavBar from './NavBar.jsx';
 import './App.css'
 const apiUrl = import.meta.env.VITE_API_URL_RESULT;
 
@@ -47,6 +48,7 @@ function App(){
 
   return (
     <>
+  <NavBar />
       <div className="searchCard">
         <div>
           <FishSearchBar header="Fish A"/>
