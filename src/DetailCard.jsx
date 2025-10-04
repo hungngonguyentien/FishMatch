@@ -16,7 +16,6 @@ function DetailCard({header, iconColor, score, fishOneName, fishTwoName, fishOne
             UpdateIconColor(iconColor.mediumLow);
         else
             UpdateIconColor(iconColor.low);
-        console.log(fishOneDisplayInfo);
     }, [iconColor, score, fishOneName, fishTwoName, fishOneDisplayInfo])
 
     function toggleDisplay() {

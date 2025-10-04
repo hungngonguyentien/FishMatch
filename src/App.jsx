@@ -3,6 +3,7 @@ import FishSearchBar from "./FishSearchBar.jsx";
 import SubmitButton from "./SubmitButton.jsx";
 import ResultCard from "./ResultCard.jsx";
 import NavBar from './NavBar.jsx';
+import { Helmet } from "react-helmet-async";
 import './App.css'
 const apiUrl = import.meta.env.VITE_API_URL_RESULT;
 
@@ -48,7 +49,18 @@ function App(){
 
   return (
     <>
-  <NavBar />
+      <Helmet>
+        <title>Fish Match | Aquarium Fish Compatibility Checker</title>
+        <meta
+          name="description"
+          content="Check fish compatibility instantly. Fish Match helps you find the best tank mates and avoid conflicts in your aquarium."
+        />
+        <meta
+          name="keywords"
+          content="fish compatibility, aquarium fish, tank mates, fish match"
+        />
+      </Helmet>
+      <NavBar />
       <div className="searchCard">
         <div>
           <FishSearchBar header="Fish A"/>
